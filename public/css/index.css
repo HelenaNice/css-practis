@@ -28,7 +28,7 @@
   background-color: orange;
 }
 /* 4-7 цель отсюда на id , цвет зеленый */
-#target:target {
+.lesson-four-task-seven #target:target {
   color: rgb(25, 231, 25);
   background-color: green;
 }
@@ -73,10 +73,11 @@
   background-color: red;
 }
 /* 4-16 вне диапазона значений инпут*/
-.lesson-four-task-sixteen input:out-of-range {
+
+п.lesson-four-task-sixteen input:out-of-range {
   background-color: red;
 }
-/* 4-17 в диапазонез начений, то красн */
+/* 4-17 в диапазонез начений, то красн Убрала значение class="bg-secondary" и все работает*/
 .lesson-four-task-seventeen input:in-range {
   background-color: red;
 }
@@ -85,10 +86,11 @@
   background: red;
 }
 /* 4-19 если фокус на любом елемен формы- все поля желт текст бел*/
-.lesson-four-task-nineteen .btn-group:focus-within button {
+.card-body .lesson-four-task-nineteen:focus-within button {
   color: white;
   background-color: yellow;
 }
+
 /* 4-20 если инвалид - форма красная */
 .lesson-four-task-twenty input:invalid {
   background-color: red;
