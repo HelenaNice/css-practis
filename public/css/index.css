@@ -74,12 +74,12 @@
 }
 /* 4-16 вне диапазона значений инпут*/
 
-п.lesson-four-task-sixteen input:out-of-range {
-  background-color: red;
+.lesson-four-task-sixteen #quantity:out-of-range {
+  background-color: red !important;
 }
 /* 4-17 в диапазонез начений, то красн Убрала значение class="bg-secondary" и все работает*/
-.lesson-four-task-seventeen input:in-range {
-  background-color: red;
+.lesson-four-task-seventeen #quantity:in-range {
+  background-color: red !important;
 }
 /* 4-18 красн плейсхолдер, исчез при вводе текста в поле */
 .lesson-four-task-eighteen input:placeholder-shown {
