@@ -1,0 +1,18 @@
+{{#with data}}
+<div class="preview">
+    <div class="preview_header">
+        {{!-- шапка с датой и 2 категорії --}}
+        <span class="preview_date">{{date}}</span>
+
+        {{!-- итерація категорій --}}
+        {{#each category}}
+        <span class="preview_category mark_{{id}}">{{text}}</span>
+        {{/each}}
+    </div>
+    {{!-- буде багато постів, тому це не заголовки --}}
+    <strong class="preview_title">{{title}}</strong>
+    <p class="preview_description">{{text}}</p>
+    <a href="#"> Continued reading</a>
+
+</div>
+{{/with}}
