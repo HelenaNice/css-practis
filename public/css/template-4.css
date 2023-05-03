@@ -1,0 +1,270 @@
+:root {
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-d: 16px;
+  --size-l: 20px;
+
+  --color-border: #dee2e6;
+  --color-primary: blue;
+  --color-white: #fff;
+
+  --color-title: #212529;
+  --color-text: #343a40;
+
+  --border-radius: 12px;
+
+  --weight-title: 500;
+  --weight-text: 400;
+}
+
+/* =============================== */
+
+.page {
+  background: var(--color-white);
+  padding: 0 15px;
+  font-family: roboto;
+
+  display: flex;
+  justify-content: center;
+}
+.page_content {
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+}
+
+/* ============================= */
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 17px;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  /* функция ділення значення змінної на 2 сalc(var()/2) */
+  border-radius: calc(var(--border-radius) / 2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navigate panel */
+.nav {
+  display: flex;
+}
+
+.nav_inline {
+  gap: var(--space-l);
+}
+
+.nav_vertical {
+  gap: var(--space-xm);
+  flex-direction: column;
+}
+
+.nav_link {
+  color: var(--color-text);
+  font-size: var(--size-d);
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* всі блоки окрім останнього мають відступ */
+.page_block:not(:last-of-child) {
+  margin-bottom: 80px;
+}
+
+/* відступи для футера vertic */
+.footer {
+  padding: var(--space-l) 0;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+}
+/* розмір тексту lk копирайта */
+.footer_copyright {
+  font-size: var(--size-s);
+  color: var(--color-text);
+
+  display: block;
+  margin-top: var(--space-m);
+}
+
+/* окрем класс для заголовків у футері */
+.footer_title {
+  font-size: var(--size-l);
+  color: var(--color-title);
+
+  display: block;
+  margin-bottom: var(--space-m);
+  font-weight: var(--weight-title);
+}
+
+/* позицінування елементів */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: var(--space-b) 0;
+}
+
+.hero_image {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  margin-left: 0;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* кнопка********** */
+.hero_button {
+  display: inline-block;
+  font-size: var(--size-d);
+  text-decoration: none;
+  padding: var(--space-m) var(--space-xm);
+  border-radius: var(--border-radius);
+  background-color: #6c757d;
+  color: var(--color-white);
+  width: fit-content;
+  border-radius: calc(var(--border-radius) / 3);
+}
+
+/* стилізаія заголовкa та тексту */
+.hero_title {
+  color: var(--color-title);
+  font-size: 50x;
+  font-weight: var(--weight-title);
+  line-height: 120%;
+}
+.hero_text {
+  color: var(--color-text);
+  font-size: 20x;
+  font-weight: var(--weight-text);
+  line-height: 170%;
+}
+/* ===================== */
+/* для карток */
+.blog {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--color-border);
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 300px;
+}
+
+.card_image {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  height: 64px;
+  width: 64px;
+  border-radius: 12px;
+}
+
+.card_title {
+  font-size: 32px;
+  line-height: 100%;
+  font-weight: var(--weight-title);
+  margin: 0;
+}
+
+.card_text {
+  font-weight: var(--weight-text);
+  font-size: var(--size-d);
+  text-align: start;
+  color: var(--color-title);
+  line-height: 170%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.button {
+  display: inline-block;
+  font-size: var(--size-d);
+  text-decoration: none;
+  padding: var(--space-m) var(--space-xm);
+  border-radius: var(--border-radius);
+}
+
+.card_button {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+/* actions========== */
+
+.act {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+  padding: var(--space-l);
+  border-radius: var(--border-radius);
+}
+
+.act_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 1px;
+  gap: 12px;
+}
+.act_title {
+  font-size: 27px;
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.act_button {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-white);
+  width: 240px;
+  height: 52px;
+  text-align: center;
+  align-content: center;
+  color: var(--color-text);
+  border-radius: 5px;
+  justify-content: center;
+  font-size: var(--size-l);
+  text-decoration: none;
+  padding: var(--space-m) var(--space-xm);
+}

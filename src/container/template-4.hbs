@@ -1,0 +1,63 @@
+<header class="header row g-0">
+  <div class="logo">
+    {{>logo}}
+  </div>
+  {{!-- посилання справа сторінки --}}
+  <nav class="header_nav col-9 ">
+    <div class="header_nav_right">
+      {{!-- ітeрація списка зі змінною header --}}
+      {{>nav list=header}}
+    </div>
+  </nav>
+</header>
+{{!--block hero--}}
+{{#with main}}
+<div class="hero">
+  <img src="{{image}}" alt="Hero image" class="hero_image">
+  <div class="hero_content">
+    <h1 class="hero_title">{{heading}}</h1>
+    <p class="hero_text">{{descriotion}}</p>
+    <a class="hero_button" href="{{href}}">{{button}}</a>
+  </div>
+</div>
+{{/with}}
+
+{{!-- main, block 3 card --}}
+<main class="blog">
+  {{#each featured}}
+  {{>cardFutur data=this}}
+  {{/each}}
+</main>
+
+{{!-- subscr --}}
+<div class="act">
+  {{#each actions}}
+  {{>cardAct data=this}}
+  {{/each}}
+</div>
+
+
+
+
+
+{{!-- блок футера --}}
+
+<footer class="row footer">
+  <div class="col-3">
+    {{>logo}}
+    <span class="footer_copyright">Copyright 2023-2024</span>
+  </div>
+  {{!-- ітерація змінної title--}}
+  {{#each footer}}
+  <div class="col-3">
+    <span class="footer_title">{{title}}</span>
+    {{!-- ітeрація списка зі змінною links вертикально --}}
+    {{>nav list=links isVertical=true}}
+  </div>
+  {{/each}}
+</footer>
+
+
+
+
+</div>
