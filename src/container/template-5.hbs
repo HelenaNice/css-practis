@@ -60,19 +60,27 @@
   </form>
   {{/with}}
 
+  <div class="advantages">
+    {{#each advantages}}
+    <div>
+      <strong>{{title}}</strong>
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+  </div>
 
 </main>
 
 
 {{!-- block 3 card --}}
-<div class="advantages">
+{{!-- <div class="advantages">
   {{#each advantages}}
   <div>
     <strong>{{title}}</strong>
     <p>{{text}}</p>
   </div>
   {{/each}}
-</div>
+</div> --}}
 
 
 
