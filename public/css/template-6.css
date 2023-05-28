@@ -350,6 +350,8 @@
   text-align: right;
   text-decoration-line: underline;
   color: #007bff;
+  position: relative;
+  bottom: 100px;
 }
 
 .upd_img {
