@@ -1,0 +1,11 @@
+<header class="header">
+    <div class="head_nav">
+        <div class="logo">logo</div>
+        <div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}">
+            {{#each links}}
+            <a href="{{url}}" class="nav_link">{{text}}
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</header>

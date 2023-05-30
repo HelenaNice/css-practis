@@ -1,0 +1,65 @@
+{{!-- Header: head_nav+heah_ad--}}
+{{#with header}}
+{{>headerDark}}
+
+{{!-- Block brand --}}
+<div class="brand">
+  {{!-- ♥+slogan --}}
+  <div class="pict">
+    <a href="{{url}}" class="ad_link">Ad</a>
+    <div class="slogan">{{ad.text}}</div>
+  </div>
+  {{!-- 10 us --}}
+  <div class="userOnline">User Online: {{userOnline}}</div>
+</div>
+{{/with}}
+{{!-- ====================================== --}}
+
+{{!-- хироблок заголовок та вступ--}}
+<div class="hero_block">
+  {{#with hero}}
+  {{>hero title=title text=description}}
+  {{!-- виводимо кнопку --}}
+  <a class="hero_button" href="{{button.url}}">{{button.text}} </a>
+  {{/with}}
+</div>
+{{!-- ============================================================ --}}
+
+{{!--  --}}
+
+{{!-- about_block заголовок та info--}}
+{{#with about}}
+<div class="about_block">
+  <h2 class="about_head">{{heading}}</h2>
+  <div class="about_info">{{info}}</div>
+</div>
+{{/with}}
+{{!-- ============================================================== --}}
+
+{{!-- main, block 3 card --}}
+<main class="articles">
+  <div class="art_header">
+    <h2 class="art_hed">Our Articles</h2>
+    <a class="art_button" href="#">View All </a>
+  </div>
+  <div class="art_card_block">
+    {{#each articles}}
+    {{>articleCardDark data=this}}
+    {{/each}}
+  </div>
+
+</main>
+
+{{!-- footer --}}
+{{#with footer}}
+<div class="footer">
+  <div class="footer_info">
+    <div class="footer_policy">
+      {{#each pages}}
+      <a class="policy_item" href="{{path}}">{{name}}</a>
+      {{/each}}
+    </div>
+    <div class="copyright">{{copyright}}</div>
+  </div>
+</div>
+{{/with}}
