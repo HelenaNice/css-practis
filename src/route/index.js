@@ -1085,11 +1085,13 @@ router.get('/template-7', function (req, res) {
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/slack', function (req, res) {
-  layout: null,
-    // res.render генерує нам HTML сторінку
+  // res.render генерує нам HTML сторінку
 
-    //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('slack')
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('slack', {
+    layout: null,
+  })
+  //
 })
 
 // ================================================================
